@@ -3,13 +3,11 @@ package model;
 public class ReservationHotel extends Reservation {
 	int nbLitSimple;
 	int nbLitDouble;
-	int numeroChambre;
 	
 	public ReservationHotel(int jour, int mois, int nbLitSimple, int nbLitDouble, int numeroChambre) {
-		super(jour, mois);
+		super(jour, mois, numeroChambre);
 		this.nbLitSimple = nbLitSimple;
 		this.nbLitDouble = nbLitDouble;
-		this.numeroChambre = numeroChambre;
 	}
 	
 	@Override
@@ -26,7 +24,7 @@ public class ReservationHotel extends Reservation {
 			chaine.append(nbLitDouble + " lits doubles");
 		}
 		
-		chaine.append("chambre n°" + numeroChambre);
+		chaine.append("chambre n°" + numeroEntiteReserve);
 		
 		return chaine.toString();
 	}
