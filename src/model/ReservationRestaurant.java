@@ -13,11 +13,11 @@ public class ReservationRestaurant extends Reservation {
 	@Override
 	public String toString() {
 		StringBuilder chaine = new StringBuilder();
-		chaine.append("Le " + jour + "/" + mois + " : table n°" + numeroTable + " pour le ");
-		if(numeroTable == 1) {
+		chaine.append("Le " + jour + "/" + mois + "\nTable " + numeroTable + " pour le ");
+		if(numeroService == 1) {
 			chaine.append("premier service.");
 		} else {
-			chaine.append("deuxième service.");
+			chaine.append("deuxiÃ¨me service.");
 		}
 		return chaine.toString();
 	}
