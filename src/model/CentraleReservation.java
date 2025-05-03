@@ -30,8 +30,8 @@ public class CentraleReservation <T extends EntiteReservable<U>, U extends Formu
 		return possibilites;
 	}
 	
-	public Reservation reserver(int indexEntite, U formulaire) {
-		T entite = this.entites[indexEntite -1];
+	public Reservation reserver(int numEntite, U formulaire) {
+		T entite = this.entites[numEntite -1];
 		
 		formulaire.setIdentificationEntite(entite.getIdentification());
 		
